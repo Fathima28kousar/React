@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-react-12/package-lock.json
-react-12/package.json
-react-12/README.md
-src/images
+node_modules
+package-lock.json
+package.json
+README.md
