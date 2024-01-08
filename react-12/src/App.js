@@ -1,9 +1,11 @@
-import Message from './StateEx/Message'
-
+import HexaColor from './HexColor'
 
 function App(){
-    return <div>
-        <Message/>
+    
+    return(
+        <div>
+        <HexaColor/>
     </div>
+    ) 
 }
 export default App
