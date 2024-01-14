@@ -1,20 +1,29 @@
 import React from 'react'
-const headerStyles = {
-    backgroundColor: 'lightBlue',
-    height: '200px',
-    padding: '2rem 0 0 5rem',
-    fontSize: '2rem',
-}
-
-
-class Header extends React.Component{
-    render(){
-        return(
-            <div style={headerStyles}>
-                <h3>Welcome to 30 days of React</h3>
-                <p>Getting Started</p>
-            </div>
-        )
+class Header extends React.Component {
+    render() {
+      const {
+        welcome,
+        title,
+        subtitle,
+        author: { firstName, lastName },
+        date,
+      } = this.props.data
+  
+      return (
+        <header>
+          <div className='header-wrapper'>
+            <h1>{welcome}</h1>
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+            <p>
+              {firstName} {lastName}
+            </p>
+            <small>{date}</small>
+            <p>Select a country for your next holiday</p>
+          </div>
+        </header>
+      )
     }
-}
+  }
+
 export default Header
