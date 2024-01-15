@@ -1,33 +1,60 @@
-import React from 'react'
-import Header from './Header'
+import React from 'react';
 
-class App extends React.Component{
-    state = {
-        loggedIn : false,
-    }
+const darkStyle = {
+  backgroundColor: 'black',
+  color: 'white'
+};
 
-   render(){
+const normalStyle = {
+  backgroundColor: 'white',
+  color: 'black'
+};
 
-    const data = {
-        welcome: '30 Days Of React',
-        title: 'Getting Started React',
-        subtitle: 'JavaScript Library',
-        author: {
-          firstName: 'Asabeneh',
-          lastName: 'Yetayeh',
-        },
-        date: 'Oct 9, 2020',
-    }
-    let status;
-    if (this.state.loggedIn) {
-        status = <h3>Welcome to 30 Days Of React</h3>
-    } else {
-        status = <h3>Please Login</h3>
-    }
-    return<div>
-        <Header data={data} />
-        {status}
-    </div>
-   }
+const pinkStyle = {
+  backgroundColor: 'pink',
+  color: 'black'
+};
+const yellowStyle = {
+  backgroundColor: 'yellow',
+  color: 'black'
+};
+const blueStyle = {
+  backgroundColor: 'blue',
+  color: 'black'
+};
+const redStyle = {
+  backgroundColor: 'red',
+  color: 'black'
+};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      style: normalStyle,
+    };
+  }
+
+  updateHandler = (value) => {
+    this.setState({ style: value });
+  };
+
+  render() {
+    return (
+      <div>
+        <pre>{JSON.stringify(this.state)}</pre>
+        <h1 style={{ backgroundColor: this.state.style.backgroundColor, color: this.state.style.color,height:'70vh' }}>
+          Message Value: {this.state.style.backgroundColor}
+        </h1>
+        <button onClick={this.updateHandler.bind(this, normalStyle)}>normal</button>
+        <button onClick={this.updateHandler.bind(this, darkStyle)}>dark</button>
+        <button onClick={this.updateHandler.bind(this, pinkStyle)}>pink</button>
+        <button onClick={this.updateHandler.bind(this, yellowStyle)}>yellow</button>
+        <button onClick={this.updateHandler.bind(this, blueStyle)}>blue</button>
+        <button onClick={this.updateHandler.bind(this, redStyle)}>red</button>
+
+      </div>
+    );
+  }
 }
-export default App
+
+export default App;
