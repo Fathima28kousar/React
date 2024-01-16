@@ -1,60 +1,57 @@
-import React from 'react';
+import React from 'react'
+const options = [
+  {
+    value: '',
+    label: '-- Select Country--',
+  },
+  {
+    value: 'Finland',
+    label: 'Finland',
+  },
+  {
+    value: 'Sweden',
+    label: 'Sweden',
+  },
+  {
+    value: 'Norway',
+    label: 'Norway',
+  },
+  {
+    value: 'Denmark',
+    label: 'Denmark',
+  },
+]
+const selectOptions = options.map(({value,label}) => (
+  <option value={value}>{label}</option>
+))
 
-const darkStyle = {
-  backgroundColor: 'black',
-  color: 'white'
-};
-
-const normalStyle = {
-  backgroundColor: 'white',
-  color: 'black'
-};
-
-const pinkStyle = {
-  backgroundColor: 'pink',
-  color: 'black'
-};
-const yellowStyle = {
-  backgroundColor: 'yellow',
-  color: 'black'
-};
-const blueStyle = {
-  backgroundColor: 'blue',
-  color: 'black'
-};
-const redStyle = {
-  backgroundColor: 'red',
-  color: 'black'
-};
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      style: normalStyle,
-    };
+  // declaring state
+  state = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    country: '',
+    tel: '',
+    dateOfBirth: '',
+    favoriteColor: '',
+    weight: '',
+    gender: '',
+    file: '',
+    bio: '',
+    skills: {
+      html: false,
+      css: false,
+      javascript: false,
+    },
   }
-
-  updateHandler = (value) => {
-    this.setState({ style: value });
-  };
-
-  render() {
-    return (
-      <div>
-        <pre>{JSON.stringify(this.state)}</pre>
-        <h1 style={{ backgroundColor: this.state.style.backgroundColor, color: this.state.style.color,height:'70vh' }}>
-          Message Value: {this.state.style.backgroundColor}
-        </h1>
-        <button onClick={this.updateHandler.bind(this, normalStyle)}>normal</button>
-        <button onClick={this.updateHandler.bind(this, darkStyle)}>dark</button>
-        <button onClick={this.updateHandler.bind(this, pinkStyle)}>pink</button>
-        <button onClick={this.updateHandler.bind(this, yellowStyle)}>yellow</button>
-        <button onClick={this.updateHandler.bind(this, blueStyle)}>blue</button>
-        <button onClick={this.updateHandler.bind(this, redStyle)}>red</button>
-
-      </div>
-    );
+  handleChange = (e) => {
+    const {name,value,type,checked} = e.target
+    if(type === 'checkbox'){
+      this.setState({
+        skills: { ...this.state.skills}
+      })
+    }
   }
 }
-
-export default App;
+export default App

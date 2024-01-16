@@ -1,0 +1,35 @@
+src
+  App.js
+  index.js
+  components
+   -auth
+    -Signup.js
+    -Signin.js
+    -Forgotpassword.js
+    -Resetpassord.js
+  header
+   -Header.js
+  footer
+   -Footer.js
+  assets
+   -images
+   -icnons
+   - fonts
+  styles
+   -button.js
+   -button.scss
+ utils
+  -random-id.js
+  -display-time.js
+  -generate-color.js
+ shared
+  -Button.js
+  -InputField.js
+  -TextAreaField.js
+
+
+
+React Folder Structure by https://www.devaradise.com
+React Folder Structure by www.robinwieruch.de
+React Folder Structure by Faraz Ahmad
+React Folder Structure by https://maxrozen.com/
