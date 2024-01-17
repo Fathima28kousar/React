@@ -38,7 +38,8 @@ const child = new Child(
 
 const app = (
     <div>
-        
+        {child}
+        {p1}
     </div>
 )
 
