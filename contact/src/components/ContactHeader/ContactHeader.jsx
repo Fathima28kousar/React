@@ -1,6 +1,5 @@
 import styles from './ContactHeader.module.css'
 
-import React from 'react'
 const ContactHeader = () => {
   return (
     <div className={`${styles.contact_section}`}>
