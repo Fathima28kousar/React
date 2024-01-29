@@ -1,20 +1,12 @@
 import React from 'react'
-import Navbar from './Navbar/Navbar'
-import { BrowserRouter,Switch,Route } from 'react-router-dom'
-import User from './User'
-import Home from './Hooks/Counter'
-const App =() => {
+class App extends React.Component{
 
-    return(
-        <div>
-            <BrowserRouter>
-            <Navbar/>
-            <Switch>
-                <Route path='/home' component={Home}/>
-                <Route path='/userapi' component={User}/>  
-            </Switch>
-            </BrowserRouter>
-        </div>
-    )
+    render(){
+        return(
+            <div>
+                    <h1>Hello</h1>
+            </div>
+        )
+    }
 }
 export default App
