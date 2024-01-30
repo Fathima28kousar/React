@@ -1,10 +1,11 @@
 import React from 'react'
+import FramerMotion from './FMtutorial/FramerMotion'
 class App extends React.Component{
 
     render(){
         return(
             <div>
-                    <h1>Hello</h1>
+              <FramerMotion/>
             </div>
         )
     }
