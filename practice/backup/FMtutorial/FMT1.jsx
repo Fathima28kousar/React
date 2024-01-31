@@ -1,3 +1,4 @@
+// how to create text
 import {motion} from 'framer-motion'
 const FramerMotion = () => {
   return (

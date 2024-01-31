@@ -1,0 +1,6 @@
+.top_section{
+   display: flex;
+   justify-content: space-around;
+   align-items: end;
+   padding-top: 70px;
+}

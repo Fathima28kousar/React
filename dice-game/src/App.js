@@ -1,5 +1,5 @@
 import StartGame from "./Components/StartGame"
-import GamePlay from './Components/GamePlay'
+import GamePlay from './Components/GamePlay/GamePlay'
 import {useState} from 'react'
 import './App.css'
 
