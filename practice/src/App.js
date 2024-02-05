@@ -1,12 +1,9 @@
-import Message from './Message'
+import User from "./User"
+
 function App(){
     return <div>
         <h1>App Componenet</h1>
-        <hr/>
-        <Message/>
-        <Message/>
-        <Message/>
-        <Message/>
+        <User/>
     </div>
 }
 
