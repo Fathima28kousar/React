@@ -1,9 +1,13 @@
-import User from "./User"
+// import User from "./User"
+// import UseState from './hooks/UseState'
+import UseEffect from './hooks/UseEffect'
 
 function App(){
     return <div>
-        <h1>App Componenet</h1>
-        <User/>
+        
+        {/* <User data={{name:'fathima',age:4}}/> */}
+        {/* <UseState/> */}
+        <UseEffect/>
     </div>
 }
 
