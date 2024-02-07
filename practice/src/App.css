@@ -1,0 +1,37 @@
+.cart-wrapper{
+    border: 1px solid black;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-left: 5rem;
+
+    .img-wrapper img{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+
+    .btn-wrapper button{
+        color: white;
+        background-color: red;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .text-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.add-to-cart img{
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top:0;
+}
