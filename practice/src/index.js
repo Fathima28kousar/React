@@ -13,4 +13,4 @@ ReactDOM.render(
     </Provider>
 
 ,rootElement);
-console.log(store)
+// console.log(store)
