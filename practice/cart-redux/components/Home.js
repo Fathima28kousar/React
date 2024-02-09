@@ -22,14 +22,8 @@ const Home = (props) => {
             </span>
         </div>
         <div className='btn-wrapper item'>
-            <button
-            onClick={() =>
-              props.addToCartHandler({price:100,name:'iphone'})}
-            >Add to cart</button>
-            <button
-            onClick={() =>
-              props.addToCartHandler()}
-            >Remove</button>
+        <button className='add-button' onClick={() =>props.addToCartHandler({price:100,name:'iphone'})}>Add to cart</button>
+        <button className='remove-button' onClick={() =>props.removeCartHandler()}>Remove</button>
         </div>
       </div>
     </div>

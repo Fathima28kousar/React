@@ -15,13 +15,24 @@
         background-color: blue;
     }
 
-    .btn-wrapper button{
-        color: white;
-        background-color: red;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-    }
+    .btn-wrapper {
+        .add-button{
+            color: white;
+            background-color: green;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .remove-button{
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+}
+
+
 
     .text-wrapper{
         display: flex;
