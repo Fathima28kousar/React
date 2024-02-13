@@ -1,7 +1,12 @@
+import Header from './containers/Header'
+// import ProductComponent from './containers/ProductComponent'
+// import ProductListing from './containers/ProductListing'
 const App = () => {
   return (
     <div>
-      <h1>App Component!</h1>
+      <Header/>
+      {/* <ProductComponent/>
+      <ProductListing/> */}
     </div>
   )
 }
