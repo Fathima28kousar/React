@@ -19,13 +19,14 @@ const ProductDetail = () =>{
         dispatch(selectedProduct(response.data))
     }
     useEffect(() => {
-        if(productId && productId !== "") fetchProductDetail();
+        if(productId && productId !== "") 
+        fetchProductDetail();
           return () => {
             dispatch(removeSelectedProduct())
           }
 
 
-    }, [productId])
+    }, [productId,dispatch])
     return (
         <div className="container mt-5">
           {Object.keys(product).length === 0 ? (
