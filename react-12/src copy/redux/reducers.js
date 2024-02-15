@@ -1,14 +1,13 @@
-// reducers.js
 const initialState = {
-    products: [
-      { id: 1, name: 'Product 1', price: 20 },
-      { id: 2, name: 'Product 2', price: 30 },
-      { id: 3, name: 'Product 3', price: 25 },
-    ],
-    cart: [],
-  };
-  
-  const rootReducer = (state = initialState, action) => {
+  products: [
+    { id: 1, name: 'Product 1', price: 20 },
+    { id: 2, name: 'Product 2', price: 30 },
+    { id: 3, name: 'Product 3', price: 25 },
+  ],
+  cart: [],
+};
+
+const rootReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'ADD_TO_CART':
         const existingProduct = state.cart.find((item) => item.id === action.payload.id);

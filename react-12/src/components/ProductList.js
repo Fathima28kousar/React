@@ -1,11 +1,14 @@
-import { connect } from 'react-redux';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../redux/actions';
 
-const ProductList = ({ products, addToCart }) => {
-  const handleAddToCart = (product) => {
-    addToCart(product);
-  };
+const ProductList = () => {
+  const products = useSelector(state => state.products);
+  const dispatch = useDispatch();
 
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div>
@@ -22,9 +25,4 @@ const ProductList = ({ products, addToCart }) => {
   );
 };
 
-// mapStateToProps remains the same
-const mapStateToProps = (state) => ({
-  products: state.products,
-});
-
-export default connect(mapStateToProps, { addToCart })(ProductList);
+export default ProductList;
