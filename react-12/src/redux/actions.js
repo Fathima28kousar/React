@@ -1,7 +1,10 @@
-export const addToCart = product => ({
-    type: 'ADD_TO_CART',
-    payload: { ...product, id:product.id },
-})
+export const addToCart = (product) => {
+    // console.log('Adding to cart:');
+    return {
+      type: 'ADD_TO_CART',
+      payload: { ...product, id: product.id },
+    };
+  }
  
 export const removeFromCart = (productId) => ({
     type: 'REMOVE_FROM_CART',
