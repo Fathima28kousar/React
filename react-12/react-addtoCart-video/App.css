@@ -1,0 +1,14 @@
+.icon {
+    position: relative;
+}
+
+.counter {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: white;
+}
+
