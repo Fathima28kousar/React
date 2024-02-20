@@ -7,7 +7,7 @@
     font-weight: 100;
     padding: 15px 20px;
     background-color: #ffffff;
-    
+
 
     .header {
         display: flex;
@@ -52,27 +52,30 @@
             }
 
         }
+
     }
 
     .toggleButton {
         display:none;
+        background-color: #8BC34A;
+        color: #ffffff;
+        padding: 10px 15px;
+        font-size: 24px;
+        margin-left: 10px;
     }
 
     .dropDownMenu {
         display:none;
-        position: relative;
-        left:0;
-        /* right: -100%; */
-        top:50vh;
-        height:0;
-        height: 90vh;
-        overflow:hidden;
-        width: 100vw;
-        background: blue;
-        backdrop-filter: blur(15px);
-        transition: all.5s; 
-
-
+        position: absolute;
+        right: 0;
+        top:15%;
+        width: 100%;
+        max-width: 90%;
+        height: 75%;
+        transform: translateY(0%);
+        transition: all 2s ease-in;
+        margin-right: 50px;
+        background-color: white;
 
         li {
             padding: 0.7rem;
@@ -84,8 +87,6 @@
         }
     }
 
-
-
     li {
         cursor: pointer;
         color: #333333;
@@ -96,6 +97,9 @@
         transition: all 0.3s ease-in;
     }
 
+    a:focus {
+        color: #8BC34A;
+    }
 }
 
 @media (max-width:921px) {

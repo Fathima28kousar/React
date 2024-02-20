@@ -7,6 +7,10 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import About from "../about/About"
+import Home from '../home/Home'
+import Contact from "../contact/Contact";
+import Cart from "../cart/Cart";
 
 import { useState } from "react";
 
@@ -17,28 +21,31 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.header}>
-        <img src="/images/logo.svg" alt="" />
-        <ul className={styles.groceries}>
-          <li>Everything</li>
-          <li>Groceries</li>
-          <li>Juice</li>
-        </ul>
-      </div>
+    <div>
+      <BrowserRouter>
+      <nav className={styles.navbar}>
+        <div className={styles.header}>
+          <Link to='/index'><img src="/images/logo.svg" alt="" /></Link>
+          <ul className={styles.groceries}>
+            <li><Link to='/'>Everything</Link></li>
+            <li><Link to='/'>Groceries</Link></li>
+            <li><Link to='/'>Juice</Link></li>
+            
+          </ul>
+        </div>
 
       <div className={styles.header2}>
         <ul className={styles.about}>
-          <li>About</li>
-          <li>Contact</li>
+          <li><Link to='/about' >About</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
         </ul>
 
         <ul className={styles.icons}>
           <li className={styles.icon}>
-            <FaDollarSign />1
+            <Link to='/cart'><FaDollarSign />1</Link>
           </li>
           <li className={styles.icon}>
-            <FaShoppingBasket />
+            <Link to='/cart'><FaShoppingBasket /></Link>
           </li>
           <li className={styles.profile}>
             <FaUser />
@@ -59,12 +66,22 @@ const Navbar = () => {
             <li>Everything</li>
             <li>Groceries</li>
             <li>Juice</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><Link to='/about' >About</Link></li>
+            <li><Link to='/contact'>Contact</Link></li>
           </ul>
         </div>
       )}
     </nav>
+    <Switch>
+            <Route path="/index" component={Home}/>
+            <Route path="/about"  component={About}/>
+            <Route path="/contact"   component={Contact}/>
+            <Route path="/cart"  component={Cart}/>
+
+        </Switch>
+    </BrowserRouter>
+    </div>
+    
   );
 };
 
