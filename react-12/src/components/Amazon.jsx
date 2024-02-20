@@ -1,22 +1,16 @@
-// Amazon.js
-import { list } from "../data";
-import Cards from "./Cards";
+import {list}from '../data'
+import Cards from './Cards'
 
-const Amazon = ({ handleclick, cart }) => {
+const Amazon = ({handleClick,cart}) => {
   return (
-    <div className="container mt-5">
-      <div className="row">
-        {list.map((item) => (
-          <Cards
-            key={item.id}
-            item={item}
-            handleclick={handleclick}
-            cart={cart}
-          />
-        ))}
+    <div className='container mt-5'>
+      <div className='row'>
+        {list.map((item) => 
+            <Cards key={item.id} item={item} handleClick={handleClick} cart={cart} />
+        )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Amazon;
+export default Amazon
