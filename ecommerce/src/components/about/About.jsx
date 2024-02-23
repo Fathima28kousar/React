@@ -1,7 +1,9 @@
+import Main from './main/Main'
+
 const About = () => {
   return (
     <div>
-      <h1>About page</h1>
+      <Main/>
     </div>
   )
 }

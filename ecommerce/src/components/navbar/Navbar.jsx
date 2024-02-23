@@ -1,4 +1,4 @@
-import { Switch, BrowserRouter, Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import styles from "./Navbar.module.css";
 import {
   FaShoppingBasket,
@@ -7,22 +7,19 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import About from "../about/About"
-import Home from '../home/Home'
-import Contact from "../contact/Contact";
-import Cart from "../cart/Cart";
-
 import { useState } from "react";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const toggleDropDown = () => {
     setIsOpen(!isOpen);
   };
   return (
     <div>
-      <BrowserRouter>
+      
       <nav className={styles.navbar}>
         <div className={styles.header}>
           <Link to='/index'><img src="/images/logo.svg" alt="" /></Link>
@@ -72,14 +69,8 @@ const Navbar = () => {
         </div>
       )}
     </nav>
-    <Switch>
-            <Route path="/index" component={Home}/>
-            <Route path="/about"  component={About}/>
-            <Route path="/contact"   component={Contact}/>
-            <Route path="/cart"  component={Cart}/>
 
-        </Switch>
-    </BrowserRouter>
+    
     </div>
     
   );

@@ -76,8 +76,36 @@
                 li:hover {
                     color: #6a9739;
                 }
+                .app{
+                    display:flex;
+                    gap: 20px;
+                    
+                    img {
+                        width: 150px;
+                    }
+                }
             }
         }
     }
+    hr {
+        border: none;
+        border-top: 0.5px solid #A9A9A9;
+    }
 
+    .end {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+
+        .social{
+            display: flex;
+            gap: 20px;
+
+            li:hover {
+                color:#8BC34A;
+            }
+        }
+
+
+    }
 }
