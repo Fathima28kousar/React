@@ -1,0 +1,46 @@
+.address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: pink;
+    /* height: 200vh; */
+
+    .header{
+        font-size: 24px;
+        background-color: #f8f6f3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 70px;
+        position: relative;
+    }
+
+    .info{
+        
+        display:flex;
+        gap: 20px;
+        padding: 100px 30px 70px 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+        position: relative;
+        background-color: white; /* Add a background color to the info section */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);
+        
+        
+        section{
+            border: 1px solid black;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px 100px;
+            border-radius: 5px;
+            
+        }
+    }
+
+
+}
+
+

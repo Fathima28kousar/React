@@ -1,7 +1,11 @@
+import Address from "./address/Address"
+import Faq from "./faq/Accordion"
+
 const Contact = () => {
     return (
       <div>
-        <h1>Contact page</h1>
+        <Address/>
+        <Faq/>
       </div>
     )
   }

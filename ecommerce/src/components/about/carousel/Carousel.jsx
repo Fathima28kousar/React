@@ -1,6 +1,6 @@
 import styles from "./Carousel.module.css";
 import Button from "../button/Button";
-import { FaStar } from "react-icons/fa";
+import { FaStar,FaRegCheckCircle } from "react-icons/fa";
 
 const Carousel = () => {
   return (
@@ -23,17 +23,32 @@ const Carousel = () => {
       </div>
       <div className={styles.certificate}>
         <div className={styles.heading}>
-          <img src="/images/organic-badge.jpg" alt="organic badge" />
-          <div className={styles.text}>
-            <h2>Certified Products</h2>
-            <p>
-              Click edit button to change this text. Lorem ipsum dolor sit amet
-            </p>
-          </div>
+          <img src="/images/organic-badge.png" alt="organic badge" />
+            <div className={styles.text}>
+                <h2>Certified Products</h2>
+                <p>
+                Click edit button to change this text. Lorem ipsum dolor sit amet
+                </p>
+            </div>
         </div>
         <h1>We Deal With Various Quality Organic Products!</h1>
         <img src="/images/leaf.png" alt="" />
-        <div className={styles.list}></div>
+        <div className={styles.list}>
+            <ul>
+                <li><FaRegCheckCircle/> Fresh fruits </li>
+                <li><FaRegCheckCircle/> Dry fruits </li>
+                <li><FaRegCheckCircle/> Fresh vegetables </li>
+                <li><FaRegCheckCircle/> Dried vegetables </li>
+                <li><FaRegCheckCircle/> Dried Coffee </li>
+            </ul>
+            <ul>
+                <li><FaRegCheckCircle/> Beauty products </li>
+                <li><FaRegCheckCircle/> Milk products </li>
+                <li><FaRegCheckCircle/> Organic honey </li>
+                <li><FaRegCheckCircle/> Organic tea </li>
+                <li><FaRegCheckCircle/> Dried vegetables </li>
+            </ul>
+        </div>
         <Button text="START SHOPPING" icon="cart" />
       </div>
     </div>
