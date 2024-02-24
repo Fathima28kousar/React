@@ -1,3 +1,5 @@
+import DemoCarousel from '../carousel/DemoCarousel'
+import Counter from '../counter/Counter'
 import styles from './Main.module.css'
 
 const Main = () => {
@@ -14,6 +16,8 @@ const Main = () => {
             <img src='/images/about.jpg' alt=''/>
         </div>
       </div>
+      <Counter/>
+      
     </div>
   )
 }

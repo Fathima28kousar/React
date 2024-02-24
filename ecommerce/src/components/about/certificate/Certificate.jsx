@@ -1,12 +1,13 @@
-import styles from "./Carousel.module.css";
+import styles from "./Certificate.module.css";
+import DemoCarousel from "../carousel/DemoCarousel";
 import Button from "../button/Button";
 import { FaStar,FaRegCheckCircle } from "react-icons/fa";
 
-const Carousel = () => {
+const Certificate = () => {
   return (
     <div className={styles.container}>
       <div className={styles.carousel}>
-        <img src="/images/carousel1.jpg" alt="carousel" id={styles.car} />
+      <DemoCarousel id={styles.car}/> 
         <div className={styles.stars}>
             <FaStar/>
             <FaStar/>
@@ -55,4 +56,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Certificate;
