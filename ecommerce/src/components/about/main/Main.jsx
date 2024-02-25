@@ -1,4 +1,3 @@
-import DemoCarousel from '../carousel/DemoCarousel'
 import Counter from '../counter/Counter'
 import styles from './Main.module.css'
 

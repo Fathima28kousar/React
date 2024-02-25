@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import styles from './ImageSlider.module.css'
 
 const slideStyles = {
   width: '100%',
@@ -7,35 +8,8 @@ const slideStyles = {
   borderRadius: '10px',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  transition: 'background-image 0.3s ease', // Added transition property
-};
-
-const rightArrowStyles = {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translate(0, -50%)',
-  right: '32px',
-  fontSize: '45px',
-  color: '#fff',
-  zIndex: 1,
-  cursor: 'pointer',
-};
-
-const leftArrowStyles = {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translate(0, -50%)',
-  left: '32px',
-  fontSize: '45px',
-  color: '#fff',
-  zIndex: 1,
-  cursor: 'pointer',
-};
-
-const sliderStyles = {
-  position: 'relative',
-  height: '100%',
-  overflow: 'hidden', // Ensure hidden overflow to prevent unwanted scrollbars during transitions
+  transition: 'background-image 0.3s ease', 
+  cursor: 'pointer'
 };
 
 const ImageSlider = ({ slides }) => {
@@ -66,12 +40,12 @@ const ImageSlider = ({ slides }) => {
   };
 
   return (
-    <div {...handlers} style={sliderStyles}>
+    <div {...handlers} className={styles.sliderStyles}>
       <div>
-        <div onClick={goToPrevious} style={leftArrowStyles}>
+        <div onClick={goToPrevious} className={styles.leftArrowStyles}>
           ❰
         </div>
-        <div onClick={goToNext} style={rightArrowStyles}>
+        <div onClick={goToNext} className={styles.rightArrowStyles}>
           ❱
         </div>
       </div>

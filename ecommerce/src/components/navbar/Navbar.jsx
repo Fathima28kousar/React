@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className={styles.header}>
           <Link to='/index'><img src="/images/logo.svg" alt="" /></Link>
           <ul className={styles.groceries}>
-            <li><Link to='/'>Everything</Link></li>
+            <li><Link to='/products'>Everything</Link></li>
             <li><Link to='/'>Groceries</Link></li>
             <li><Link to='/'>Juice</Link></li>
             
