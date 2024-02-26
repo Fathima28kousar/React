@@ -1,12 +1,12 @@
 import styles from  './ProductList.module.css'
-import items from './data'
-import Products from './Products'
+import Product from '../product/Product'
 
 const Productlist = ({items}) => {
+  
   return (
-    <div className={styles.ProductList}>
+    <div className={styles.productList}>
       {items.map(item => (
-        <Products key={item.id} {...item}/>
+        <Product key={item.id} {...item}/>
       ))}
     </div>
   )

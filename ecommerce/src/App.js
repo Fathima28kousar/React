@@ -6,9 +6,10 @@ import Home from './components/home/Home'
 import Contact from './components/contact/Contact'
 import Cart from './components/cart/Cart'
 import About from './components/about/About'
-import Products from './components/products/Products'
-import Productlist from './components/products/Productlist'
-import items from './components/products/data'
+import Product from './components/products/product/Product'
+import Everything from './components/everything/Everything'
+import Groceries from './components/groceries/Groceries'
+
 
 const App = () => {
   return (
@@ -20,10 +21,11 @@ const App = () => {
             <Route path="/about"  component={About}/>
             <Route path="/contact"   component={Contact}/>
             <Route path="/cart"  component={Cart}/>
-            <Route path="/products" component={Products}/>
+            <Route path="/product" component={Product}/>
+            <Route path="/everything" component={Everything}/>
+            <Route path="/Groceries" component={Groceries}/>
         </Switch>
         <Footer/>
-        <Productlist items={items}/>
     </div>
   )
 }
