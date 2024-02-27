@@ -3,5 +3,5 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 30px 10px;
-    
+    align-items: center;
 }

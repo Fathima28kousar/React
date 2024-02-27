@@ -9,6 +9,7 @@ import About from './components/about/About'
 import Product from './components/products/product/Product'
 import Everything from './components/everything/Everything'
 import Groceries from './components/groceries/Groceries'
+import ProductDetail from './components/products/productDetail/ProductDetail'
 
 
 const App = () => {
@@ -22,8 +23,9 @@ const App = () => {
             <Route path="/contact"   component={Contact}/>
             <Route path="/cart"  component={Cart}/>
             <Route path="/product" component={Product}/>
-            <Route path="/everything" component={Everything}/>
+            <Route path="/everything" exact component={Everything}/>
             <Route path="/Groceries" component={Groceries}/>
+            <Route path="/productDetail/:id" component={ProductDetail} />
         </Switch>
         <Footer/>
     </div>

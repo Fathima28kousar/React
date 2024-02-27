@@ -28,6 +28,7 @@ const Navbar = () => {
             <li><Link to='/Groceries'>Groceries</Link></li>
             <li><Link to='/'>Juice</Link></li>
             
+            
           </ul>
         </div>
 
