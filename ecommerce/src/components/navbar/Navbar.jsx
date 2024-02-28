@@ -1,22 +1,17 @@
 import { Link} from "react-router-dom";
 import styles from "./Navbar.module.css";
-import {
-  FaShoppingBasket,
-  FaDollarSign,
-  FaUser,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import {FaShoppingBasket,FaDollarSign,FaUser,FaBars,FaTimes} from "react-icons/fa";
 import { useState } from "react";
 
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   const toggleDropDown = () => {
     setIsOpen(!isOpen);
   };
+
+
   return (
     <div>
       
@@ -43,7 +38,8 @@ const Navbar = () => {
             <Link to='/cart'><FaDollarSign />1</Link>
           </li>
           <li className={styles.icon}>
-            <Link to='/cart'><FaShoppingBasket /></Link>
+          <Link to='/cart'>
+              <FaShoppingBasket />{cart.length}</Link>
           </li>
           <li className={styles.profile}>
             <FaUser />

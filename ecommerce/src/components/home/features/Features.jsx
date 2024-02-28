@@ -1,10 +1,14 @@
 import styles from './Features.module.css'
 import { FaTruck,FaRegAddressBook,FaRegMoneyBillAlt,FaRecycle } from "react-icons/fa"
 import {Link} from 'react-router-dom'
+import ProductList from '../../products/productlist/Productlist'
+import items from '../../products/data'
 
 const Features = () => {
+  const limitedItems = items.slice(1,5)
   return (
-    <div className={styles.features}>
+    <div className={styles.container}>
+      <div className={styles.features}>
       <section>
         <FaTruck className={styles.icon}/>
         <div>
@@ -36,7 +40,17 @@ const Features = () => {
             <p>No Questions Asked</p>
         </div>
       </section>
+      
+    </div >
+
+    <div className={styles.sellingProducts}>
+      <h2>Best Selling Products</h2>
+      <img src='/images/leaf.png' alt=''/>
+      <ProductList items={limitedItems}/>
     </div>
+    
+    </div>
+    
   )
 }
 

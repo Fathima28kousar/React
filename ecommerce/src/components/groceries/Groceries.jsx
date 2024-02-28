@@ -1,5 +1,4 @@
 import styles from './Groceries.module.css'
-
 import Productlist from '../products/productlist/Productlist'
 import items from '../products/data'
 
