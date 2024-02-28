@@ -84,13 +84,8 @@ const ProductDetail = ({cart,setCart,count,setCount}) => {
       </div>
       <div className={styles.productCont}>
 
-        <div className={styles.prodName}>
+        
         <h1>{selectedItem.name}</h1> 
-        <p>({productTotalInCart})</p>
-        </div>
-        
-        
-
         <div className={styles.shipping}>
           <h4>Price: ${selectedItem.price}.00</h4>
           <p>+ Free Shipping</p>

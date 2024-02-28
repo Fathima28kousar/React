@@ -16,6 +16,17 @@ import {useState} from 'react'
 const App = () => {
   const [cart, setCart] = useState([]);
   const [count, setCount] = useState(0);
+
+  const handleChange = (item, quantityChange) => {
+    const updatedCart = cart.map((cartItem) => {
+      if (cartItem.id === item.id) {
+        return { ...cartItem, amount: cartItem.amount + quantityChange };
+      }
+      return cartItem;
+    });
+    
+    setCart(updatedCart);
+  };
   return (
     <div>
       <Navbar cart={cart}/>
@@ -24,7 +35,7 @@ const App = () => {
             <Route path="/index" component={Home}/>
             <Route path="/about"  component={About}/>
             <Route path="/contact"   component={Contact}/>
-            <Route path="/cart"><Cart cart={cart} setCart={setCart} count={count} setCount={setCount}/></Route>
+            <Route path="/cart"><Cart cart={cart} setCart={setCart} handleChange={handleChange}/></Route>
             <Route path="/product" component={Product}/>
             <Route path="/everything" exact component={Everything}/>
             <Route path="/Groceries" component={Groceries}/>

@@ -1,5 +1,38 @@
-.cart{
+.container{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: #f8f6f3;
+    padding: 100px 0;
+    flex-direction: column;
+    
+    .empty{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+
+    table {
+        width: 80%;
+        border: 1px solid #ddd; 
+        th,td{
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+
+        th{
+            background-color: #ffffff;
+            border-collapse: collapse;
+        }
+
+       
+       
+    }
+
 }
+
