@@ -1,6 +1,6 @@
 import { Link} from "react-router-dom";
 import styles from "./Navbar.module.css";
-import {FaShoppingBasket,FaDollarSign,FaUser,FaBars,FaTimes} from "react-icons/fa";
+import {FaShoppingBasket,FaUser,FaBars,FaTimes} from "react-icons/fa";
 import { useState } from "react";
 
 
@@ -34,9 +34,6 @@ const Navbar = ({cart}) => {
         </ul>
 
         <ul className={styles.icons}>
-          <li className={styles.icon}>
-            <Link to='/cart'><FaDollarSign />1</Link>
-          </li>
           <li className={styles.icon}>
           <Link to='/cart'>
               <FaShoppingBasket />{cart.length}</Link>

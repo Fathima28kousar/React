@@ -34,6 +34,7 @@ const ProductDetail = ({cart,setCart,count,setCount}) => {
     setCart((prevCart) => [...prevCart, ...Array(quantity).fill(obj)]);
     setCount((prevCount) => prevCount + quantity);
     setProductTotalInCart((prevTotal) => prevTotal + quantity);
+    
 
       console.log('cart element', cart);
       toast.success(` ${quantity} item Added !`, {
@@ -94,10 +95,6 @@ const ProductDetail = ({cart,setCart,count,setCount}) => {
         <p>{selectedItem.description}</p>
         <Button text="ADD TO CART"  onClick={addToCart}/>
         <input type="number" min="1" max="30"  value={quantity} onChange={handleQuantityChange}/>
-
-
-      
-
 </div>
 
 </div>
