@@ -13,3 +13,17 @@
 .dice {
     cursor: pointer;
 }
+
+img{
+    width: 210px;
+}
+
+@media(max-width: 768px){
+    .dice_container{
+        margin-top: 20px;
+        overflow-x: hidden;
+    }
+    p{
+        font-size: 20px;
+    }
+}

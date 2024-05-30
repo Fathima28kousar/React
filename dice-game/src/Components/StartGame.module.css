@@ -3,7 +3,9 @@
    display: flex;
    margin: 0 auto;
    align-items: center;
-
+   height: 100vh;
+   justify-content: center;
+   
 }
 
 .container button {
@@ -30,4 +32,22 @@
 .content h1 {
     font-size: 96px;
     white-space: nowrap;
+}
+
+@media(max-width: 768px){
+    .container{
+        flex-direction: column; 
+    }
+    .content{
+        text-align: center;
+    }
+}
+
+@media(max-width: 550px){
+    .container{
+        overflow-x: hidden;
+    }
+    .content h1{
+        font-size: 50px;
+    }
 }

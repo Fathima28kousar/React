@@ -6,6 +6,7 @@
   place-items: center;
   font-size: 24px;
   background-color: white;
+  cursor: pointer;
 }
 
 .isSelected {
@@ -24,8 +25,37 @@
   align-items: end;
 }  
 
-.SelectorContainer p{
+.error{
+    color: red;
+}
+
+.selected_number{
   font-size: 24px;
   font-weight: 700;
-} 
+}
 
+@media(max-width: 768px){
+  .box{
+    margin-top: 10px;
+  }
+
+  .flex_container {
+    gap: 10px;
+    flex-wrap: wrap;
+    min-width: 258px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .SelectorContainer{
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: hidden;
+  }
+
+  .error{
+    text-align: center;
+  }
+
+}
